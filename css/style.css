@@ -62,18 +62,6 @@ body {
     text-align: center;
 }
 
-@media screen and (max-width: 992px) {
-    body {
-        background-color: olive;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    body {
-        background-color: olive;
-    }
-}
-
 /*
 1. Rotate card on click!
 2. Backgroung card picture!
