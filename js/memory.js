@@ -4,7 +4,7 @@ let flippedCard = false;
 let firstCard, secondCard;
 
 const cards = ['check', 'certificate', 'calculator', 'bed', 'bank', 'anchor', 'cube', 'envelope'];
-// const cards = ['check', 'certificate'];
+
 const cardDeck = document.getElementById('card-deck');
 
 // Called on page load to create and shuffle card elements.
