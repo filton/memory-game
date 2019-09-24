@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: olive;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+} 
+    
+.deck {
+    margin: 0 auto;
+    padding: unset;
+    display: grid;
+    grid-template-columns: 55px 55px 55px 55px;
+}
+
+.deck .card {
+    height: 70px;
+    margin: 2px 2px;
+    background-color: #bbb;
+    color: black;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    border: 1px solid black;
+    font-size: 25px;
+    transform: scale(1);   
+    transform-style: preserve-3d;
+    transition: transform .5s;
+}
+
+.card:not(.show):hover {
+    transform: scale(.95);
+    transition: all .2s ease;
+}
+
+.deck .card:not(.show):active {
+    transform: scale(.90);
+    transition: all .2s ease;
+}
+
+.card.show {
+    transform: rotateY(180deg);
+    background-color: whitesmoke;
+    transition: all .2s ease;
+}
+
+.fa {  
+    margin: auto;
+    visibility: hidden;
+    transform: scaleX(-1);
+}
+
+.fa.visible {  
+    margin: auto;
+    visibility: visible;
+}
+
+.msg-wrapper {
+    text-align: center;
+}
+
+@media screen and (max-width: 992px) {
+    body {
+        background-color: olive;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        background-color: olive;
+    }
+}
+
+/*
+1. Rotate card on click!
+2. Backgroung card picture!
+3. Visual effect on endGame!
+*/
