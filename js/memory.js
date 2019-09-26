@@ -2,6 +2,7 @@ const deck = document.getElementById("card-deck");
 
 let flippedCard = false;
 let firstCard, secondCard;
+let moves;
 
 const cards = ['check', 'certificate', 'calculator', 'bed', 'bank', 'anchor', 'cube', 'envelope'];
 
@@ -18,6 +19,8 @@ function shuffle(cards) {
 
 function startGame(reset) {
     cardDeck.innerHTML = '';
+    
+    setMovesValue(0);
 
     if (!reset) {
         cards.push(...cards);        
@@ -58,6 +61,8 @@ function showCard() {
     } else {
         flippedCard = false;
         secondCard = this;
+
+        setMovesValue(moves + 1);
 
         if (firstCard.type === secondCard.type) {
             firstCard.removeEventListener('click', showCard);
@@ -105,4 +110,9 @@ function endGame(firstCard, secondCard) {
 
     const content = document.getElementById('main-content');
     content.appendChild(msgWrapper);  
+}
+
+function setMovesValue(newMovesValue) {
+    moves = newMovesValue;
+    document.getElementById('moves').textContent = moves;
 }
